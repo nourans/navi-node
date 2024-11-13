@@ -1,0 +1,218 @@
+body {
+    margin: 0px !important;
+}
+
+.header-container {
+    background-color: #34495e;
+    font-size: 16px;
+    min-height: 53px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container .brand-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 14px 21px;
+}
+
+.header-container button {
+    border: none;
+    margin: 7.5px 15px;
+    color: white;
+    background-color: #34495e;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.drop-down__menu {
+    top: 4em !important;
+    background-color: #34495e;
+    color: white;
+    font-size: 14px;
+}
+
+.drop-down__item {
+    padding: 5px;
+    cursor:pointer;
+}
+
+.indicator-container {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    font-size: 1.2em;
+}
+
+.element-space {
+    margin: 0 0.42em;
+}
+
+.gap-right {
+    padding-right: 28px; 
+}
+
+.unvisited {
+    border: 1px solid rgb(175, 216, 248);
+    background-color: white;
+}
+
+.wall {
+    border: 1px solid black;
+    background-color: black;
+}
+
+.visited {
+    border: 1px solid rgb(175, 216, 248);
+    background-color: #fff;
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.campus-visited {
+    border-color:rgb(175, 216, 248);
+    background-color: #fff;
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.shortest-path div {
+    background-color: rgb(255, 254, 106);
+    transition: background-color 1s 0s;
+}
+
+.errorMessage{
+    color: red;
+}
+
+.shortest-path-example {
+    border: 1px solid rgb(255, 254, 106);
+    background-color: rgb(255, 254, 106);
+}
+
+.block {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 0.42em;
+}
+
+.selected-text {
+    text-align: center;
+    color: #34495e;
+    padding: 15px 25px 15px 25px;
+    font-size: 1.2em;
+    margin: 24px;
+}
+
+.map-container {
+    margin: 10px;
+}
+
+.board {
+    margin: auto;
+}
+
+.board tr {
+    display: grid;
+    grid-template-columns: repeat(52, auto);
+}
+
+.campus-board {
+    margin: auto;
+    background-image: url('../images/western_map.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.campus-board tr {
+    display: grid;
+    grid-template-columns: repeat(168, auto);
+}
+
+.board-cell {
+    width: 24px;
+    height: 24px;
+}
+
+.campus-board-cell {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+}
+
+.start_color {
+    background-color: rgb(50,205,50,0.5);
+}
+
+.target_color {
+    background-color: rgb(220,20,60,0.5);
+}
+
+.selectorContainer {
+    text-align: center;
+}
+
+.toggleSelectorButton {
+    color: white;
+    border: 1px solid #4844a3 !important;
+    background: #4844a3;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 100px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.5em 15px;
+    letter-spacing: 0.4px;
+    margin: 0.5em 0 0.5em 1em;
+    font-size: 16px;
+}
+
+.toggleSelectorButton:hover {
+    background: #6c69b5 !important;
+    border: 1px solid #6c69b5 !important;
+}
+
+.purple {
+    background-color: purple;
+}
+
+@keyframes visitedAnimation {
+    0% {
+        transform: scale(.3);
+        background-color: rgba(0, 0, 66, 0.75);
+        border-radius: 100%;
+    }
+
+    50% {
+        background-color: rgba(17, 104, 217, 0.75);
+    }
+
+    75% {
+        transform: scale(1.2);
+        background-color: rgba(0, 217, 159, 0.75);
+    }
+
+    100% {
+        transform: scale(1.0);
+        background-color: rgba(0, 190, 218, 0.75);
+    }
+}
